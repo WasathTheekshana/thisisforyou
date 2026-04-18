@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SketchBox } from "@/components/ui";
+import { flowerImageUrl } from "@/lib/cloudinary";
 
 type RepoStats = {
   stargazers_count: number;
@@ -30,6 +32,18 @@ export default async function AboutPage() {
       style={{ fontFamily: "var(--font-body)" }}
     >
       <div className="w-full max-w-lg space-y-14">
+
+        {/* lily */}
+        <div className="flex justify-center">
+          <Image
+            src={flowerImageUrl("lily")}
+            alt="Lily"
+            width={160}
+            height={160}
+            className="rounded-full object-cover"
+            priority
+          />
+        </div>
 
         {/* heading */}
         <div className="space-y-3 text-center">
