@@ -1,9 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui";
+import { flowerImageUrl } from "@/lib/cloudinary";
 
 export default function Home() {
   return (
     <main className="flex flex-1 flex-col items-center justify-center min-h-screen px-6 text-center">
       <div className="max-w-lg space-y-8">
+        <div className="flex justify-center">
+          <Image
+            src={flowerImageUrl("rose")}
+            alt="Rose"
+            width={160}
+            height={160}
+            className="rounded-full object-cover"
+            priority
+          />
+        </div>
+
         <p className="text-sm tracking-widest uppercase text-[var(--color-ink-muted)]">
           a little something
         </p>
@@ -19,18 +33,19 @@ export default function Home() {
           and send a link to someone who deserves to smile today.
         </p>
 
-        <Link
-          href="/create"
-          className="inline-block mt-4 px-8 py-3 rounded-full border border-[var(--color-border)] text-ink text-base hover:bg-blush transition-colors duration-200"
-          style={{ fontFamily: "var(--font-body)" }}
-        >
-          make a bouquet
+        <Link href="/create">
+          <Button className="mt-4">make a bouquet</Button>
         </Link>
       </div>
 
-      <footer className="absolute bottom-6 text-xs text-[var(--color-ink-muted)]"
-        style={{ fontFamily: "var(--font-body)" }}>
-        open source · made with love
+      <footer
+        className="absolute bottom-6 text-xs text-[var(--color-ink-muted)]"
+        style={{ fontFamily: "var(--font-body)" }}
+      >
+        open source · made with love ·{" "}
+        <Link href="/about" className="underline underline-offset-2 hover:text-ink transition-colors">
+          about
+        </Link>
       </footer>
     </main>
   );

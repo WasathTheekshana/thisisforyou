@@ -1,32 +1,57 @@
 "use client";
 
+import Image from "next/image";
 import { getFlower } from "@/lib/flowers";
+import { flowerImageUrl } from "@/lib/cloudinary";
+import { SketchBox } from "@/components/ui";
 import type { FlowerKind } from "@/types";
 
 type Props = {
   flowers: FlowerKind[];
+  onRemove?: (index: number) => void;
 };
 
-export default function BouquetPreview({ flowers }: Props) {
+export default function BouquetPreview({ flowers, onRemove }: Props) {
   if (flowers.length === 0) {
     return (
-      <div className="flex items-center justify-center h-48 rounded-3xl border border-dashed border-[var(--color-border)] text-[var(--color-ink-muted)] text-sm"
-        style={{ fontFamily: "var(--font-body)" }}>
+      <SketchBox
+        dashed
+        className="flex items-center justify-center h-32 text-[var(--color-ink-muted)] text-sm"
+        style={{ fontFamily: "var(--font-body)" }}
+      >
         your bouquet will appear here
-      </div>
+      </SketchBox>
     );
   }
 
   return (
-    <div className="flex flex-wrap gap-2 justify-center p-6 rounded-3xl border border-[var(--color-border)] bg-white min-h-48">
+    <SketchBox className="flex flex-wrap gap-2 p-4">
       {flowers.map((id, i) => {
         const flower = getFlower(id);
+        if (!flower) return null;
         return (
-          <span key={i} className="text-3xl select-none" title={flower?.name}>
-            {flower?.emoji}
-          </span>
+          <div key={i} className="relative group">
+            <div className="w-14 h-14 rounded-xl overflow-hidden">
+              <Image
+                src={flowerImageUrl(flower.imageName)}
+                alt={flower.name}
+                width={56}
+                height={56}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            {onRemove && (
+              <button
+                onClick={() => onRemove(i)}
+                aria-label={`Remove ${flower.name}`}
+                className="absolute -top-1.5 -right-1.5 w-5 h-5 flex items-center justify-center rounded-full bg-ink text-[var(--color-petal)] text-xs opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                ×
+              </button>
+            )}
+          </div>
         );
       })}
-    </div>
+    </SketchBox>
   );
 }

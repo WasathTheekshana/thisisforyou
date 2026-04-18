@@ -15,8 +15,7 @@ export type FlowerKind =
 export type Flower = {
   id: FlowerKind;
   name: string;
-  color: string;
-  emoji: string;
+  imageName: string;
 };
 
 export type Bouquet = {

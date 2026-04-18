@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Swanky_and_Moo_Moo, The_Girl_Next_Door } from "next/font/google";
+import SplashScreen from "@/components/SplashScreen";
+import PageReveal from "@/components/PageReveal";
 import "./globals.css";
 
 const swanky = Swanky_and_Moo_Moo({
@@ -39,7 +41,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-petal text-ink antialiased" suppressHydrationWarning>
-        {children}
+        <SplashScreen />
+        <PageReveal>{children}</PageReveal>
       </body>
     </html>
   );

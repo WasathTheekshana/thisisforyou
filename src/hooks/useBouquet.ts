@@ -3,7 +3,8 @@
 import { useState } from "react";
 import type { FlowerKind } from "@/types";
 
-const MAX_FLOWERS = 12;
+export const MIN_FLOWERS = 6;
+export const MAX_FLOWERS = 10;
 
 export function useBouquet() {
   const [selected, setSelected] = useState<FlowerKind[]>([]);
@@ -21,5 +22,18 @@ export function useBouquet() {
     setSelected([]);
   }
 
-  return { selected, add, remove, clear, isFull: selected.length >= MAX_FLOWERS };
+  function countOf(flower: FlowerKind): number {
+    return selected.filter((f) => f === flower).length;
+  }
+
+  return {
+    selected,
+    add,
+    remove,
+    clear,
+    countOf,
+    count: selected.length,
+    isFull: selected.length >= MAX_FLOWERS,
+    isReady: selected.length >= MIN_FLOWERS,
+  };
 }

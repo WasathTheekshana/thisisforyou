@@ -1,0 +1,14 @@
+[
+  { "id": "rose",          "name": "Rose",          "imageName": "rose"      },
+  { "id": "tulip",         "name": "Tulip",         "imageName": "lily"      },
+  { "id": "sunflower",     "name": "Sunflower",     "imageName": "sunflower" },
+  { "id": "daisy",         "name": "Daisy",         "imageName": "rose"      },
+  { "id": "lily",          "name": "Lily",          "imageName": "lily"      },
+  { "id": "lavender",      "name": "Lavender",      "imageName": "sunflower" },
+  { "id": "peony",         "name": "Peony",         "imageName": "rose"      },
+  { "id": "orchid",        "name": "Orchid",        "imageName": "lily"      },
+  { "id": "chrysanthemum", "name": "Chrysanthemum", "imageName": "sunflower" },
+  { "id": "daffodil",      "name": "Daffodil",      "imageName": "rose"      },
+  { "id": "iris",          "name": "Iris",          "imageName": "lily"      },
+  { "id": "carnation",     "name": "Carnation",     "imageName": "sunflower" }
+]
