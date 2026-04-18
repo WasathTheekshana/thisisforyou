@@ -6,8 +6,8 @@ import { flowerImageUrl } from "@/lib/cloudinary";
 export default function Home() {
   return (
     <main className="flex flex-1 flex-col items-center justify-center min-h-screen px-6 text-center">
-      <div className="max-w-lg space-y-8">
-        <div className="flex justify-center">
+      <div className="max-w-lg space-y-8" suppressHydrationWarning>
+        <div className="flex justify-center" suppressHydrationWarning>
           <Image
             src={flowerImageUrl("rose")}
             alt="Rose"
