@@ -7,8 +7,8 @@ Thank you for taking the time to contribute! Here's how to get started.
 ```bash
 git clone https://github.com/WasathTheekshana/thisisforyou.git
 cd thisisforyou
-npm install
-npm run dev
+yarn install
+yarn dev
 ```
 
 ## Workflow
@@ -19,8 +19,8 @@ npm run dev
    ```
 2. Make your changes and make sure the project builds:
    ```bash
-   npm run build
-   npm run lint
+   yarn build
+   yarn lint
    ```
 3. Open a pull request against `main` and fill in the template.
 

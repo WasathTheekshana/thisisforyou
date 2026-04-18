@@ -12,7 +12,7 @@
 
 ## Checklist
 
-- [ ] `npm run build` passes
-- [ ] `npm run lint` passes
+- [ ] `yarn build` passes
+- [ ] `yarn lint` passes
 - [ ] Follows the minimal pastel design language
 - [ ] PR is focused on a single change

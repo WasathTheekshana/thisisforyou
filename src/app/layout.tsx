@@ -41,6 +41,16 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-petal text-ink antialiased" suppressHydrationWarning>
+        <a
+          href="https://github.com/WasathTheekshana/thisisforyou"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-[#1a1a1a] text-[#fef6f0] text-xs tracking-wide hover:opacity-80 transition-opacity"
+          style={{ fontFamily: "var(--font-body)" }}
+        >
+          <span>this project is a work in progress</span>
+          <span className="underline underline-offset-2">view on github →</span>
+        </a>
         <SplashScreen />
         <PageReveal>{children}</PageReveal>
       </body>
