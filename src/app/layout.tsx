@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Swanky_and_Moo_Moo, The_Girl_Next_Door } from "next/font/google";
 import SplashScreen from "@/components/SplashScreen";
 import PageReveal from "@/components/PageReveal";
+import SentryInit from "@/components/SentryInit";
 import "./globals.css";
 
 const swanky = Swanky_and_Moo_Moo({
@@ -51,6 +52,7 @@ export default function RootLayout({
           <span>this project is a work in progress</span>
           <span className="underline underline-offset-2">view on github →</span>
         </a>
+        <SentryInit />
         <SplashScreen />
         <PageReveal>{children}</PageReveal>
       </body>
