@@ -12,7 +12,7 @@ type Props = {
 
 export default function FlowerPicker({ onSelect, countOf, isFull }: Props) {
   return (
-    <div className="grid grid-cols-6 gap-4">
+    <div className="grid grid-cols-6 gap-4" suppressHydrationWarning>
       {FLOWERS.map((flower) => (
         <FlowerCard
           key={flower.id}

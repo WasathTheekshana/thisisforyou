@@ -13,9 +13,9 @@ export default function CreatePage() {
 
   return (
     <main className="flex flex-col items-center min-h-screen px-6 py-16">
-      <div className="w-full max-w-2xl space-y-8">
+      <div className="w-full max-w-5xl space-y-8" suppressHydrationWarning>
 
-        <div className="text-center space-y-2">
+        <div className="text-center space-y-2" suppressHydrationWarning>
           <h1 className="text-5xl text-ink" style={{ fontFamily: "var(--font-display)" }}>
             pick your flowers.
           </h1>
@@ -24,7 +24,7 @@ export default function CreatePage() {
           </p>
         </div>
 
-        <div className="flex items-center justify-between text-sm" style={{ fontFamily: "var(--font-body)" }}>
+        <div className="flex items-center justify-between text-sm" suppressHydrationWarning style={{ fontFamily: "var(--font-body)" }}>
           <span className={`tabular-nums ${isFull ? "text-ink font-medium" : "text-[var(--color-ink-muted)]"}`}>
             {count} / {MAX_FLOWERS} selected
           </span>
@@ -41,7 +41,7 @@ export default function CreatePage() {
         <FlowerPicker onSelect={add} countOf={countOf} isFull={isFull} />
 
         {count > 0 && (
-          <div className="space-y-3">
+          <div className="space-y-3 max-w-2xl mx-auto w-full">
             <p className="text-sm text-[var(--color-ink-muted)]" style={{ fontFamily: "var(--font-body)" }}>
               your bouquet
             </p>
@@ -49,7 +49,7 @@ export default function CreatePage() {
           </div>
         )}
 
-        <div className="flex flex-col items-center gap-3 pt-2">
+        <div className="flex flex-col items-center gap-3 pt-2" suppressHydrationWarning>
           {count > 0 && !isReady && (
             <p className="text-sm text-[var(--color-ink-muted)]" style={{ fontFamily: "var(--font-body)" }}>
               add {remaining} more {remaining === 1 ? "flower" : "flowers"} to continue

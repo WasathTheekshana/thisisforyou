@@ -25,7 +25,7 @@ export default function BouquetPreview({ flowers, onRemove }: Props) {
   }
 
   return (
-    <SketchBox className="flex flex-wrap gap-2 p-4">
+    <SketchBox className="flex flex-wrap justify-center gap-2 p-4">
       {flowers.map((id, i) => {
         const flower = getFlower(id);
         if (!flower) return null;

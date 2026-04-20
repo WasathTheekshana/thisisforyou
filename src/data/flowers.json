@@ -1,14 +1,62 @@
 [
-  { "id": "rose",          "name": "Rose",          "imageName": "rose"      },
-  { "id": "tulip",         "name": "Tulip",         "imageName": "lily"      },
-  { "id": "sunflower",     "name": "Sunflower",     "imageName": "sunflower" },
-  { "id": "daisy",         "name": "Daisy",         "imageName": "rose"      },
-  { "id": "lily",          "name": "Lily",          "imageName": "lily"      },
-  { "id": "lavender",      "name": "Lavender",      "imageName": "sunflower" },
-  { "id": "peony",         "name": "Peony",         "imageName": "rose"      },
-  { "id": "orchid",        "name": "Orchid",        "imageName": "lily"      },
-  { "id": "chrysanthemum", "name": "Chrysanthemum", "imageName": "sunflower" },
-  { "id": "daffodil",      "name": "Daffodil",      "imageName": "rose"      },
-  { "id": "iris",          "name": "Iris",          "imageName": "lily"      },
-  { "id": "carnation",     "name": "Carnation",     "imageName": "sunflower" }
+  {
+    "id": "rose",
+    "name": "Rose",
+    "imageName": "rose"
+  },
+  {
+    "id": "tulip",
+    "name": "Tulip",
+    "imageName": "tulip"
+  },
+  {
+    "id": "sunflower",
+    "name": "Sunflower",
+    "imageName": "sunflower"
+  },
+  {
+    "id": "lily",
+    "name": "Lily",
+    "imageName": "lily"
+  },
+  {
+    "id": "daisy",
+    "name": "Daisy",
+    "imageName": "daisy"
+  },
+  {
+    "id": "primrose",
+    "name": "primrose",
+    "imageName": "Primrose"
+  },
+  {
+    "id": "snapdragon",
+    "name": "snapdragon",
+    "imageName": "Snapdragon"
+  },
+  {
+    "id": "cosmos",
+    "name": "Cosmos",
+    "imageName": "cosmos"
+  },
+  {
+    "id": "cherryblossom",
+    "name": "Cherry Blossom",
+    "imageName": "cherryblossom"
+  },
+  {
+    "id": "orchid",
+    "name": "Orchid",
+    "imageName": "Orchid"
+  },
+  {
+    "id": "delphinium",
+    "name": "Delphinium",
+    "imageName": "delphinium"
+  },
+  {
+    "id": "daffodil",
+    "name": "Daffodil",
+    "imageName": "daffodil"
+  }
 ]

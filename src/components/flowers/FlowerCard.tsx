@@ -24,6 +24,7 @@ export default function FlowerCard({ flower, count, onSelect, disabled }: Props)
     >
       <motion.div
         className="relative w-full aspect-square rounded-xl overflow-hidden"
+        suppressHydrationWarning
         whileHover={{ rotate: 6 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >

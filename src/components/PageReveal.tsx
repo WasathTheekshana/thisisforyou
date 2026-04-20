@@ -9,6 +9,7 @@ export default function PageReveal({ children }: { children: ReactNode }) {
     <motion.div
       initial={{ scale: 0.08 }}
       animate={{ scale: 1 }}
+      suppressHydrationWarning
       transition={{
         delay: SPLASH_MS / 1000,
         duration: 1.4,

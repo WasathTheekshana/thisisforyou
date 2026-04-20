@@ -27,11 +27,13 @@ export default function SplashScreen() {
             initial={{ scale: 0.2, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+            suppressHydrationWarning
           >
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 3, ease: [0.22, 0.0, 0.36, 1] }}
               className="w-36 h-36 rounded-full overflow-hidden"
+              suppressHydrationWarning
             >
               <Image
                 src={flowerImageUrl("rose")}
