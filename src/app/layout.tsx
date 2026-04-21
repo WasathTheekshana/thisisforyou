@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Swanky_and_Moo_Moo, The_Girl_Next_Door } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import SplashScreen from "@/components/SplashScreen";
 import PageReveal from "@/components/PageReveal";
 import SentryInit from "@/components/SentryInit";
@@ -56,6 +57,7 @@ export default function RootLayout({
         <SplashScreen />
         <PageReveal>{children}</PageReveal>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!} />
     </html>
   );
 }
